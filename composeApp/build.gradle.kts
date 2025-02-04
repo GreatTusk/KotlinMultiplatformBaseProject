@@ -14,6 +14,7 @@ kotlin {
         }
         commonMain.dependencies {
             implementation(projects.ui.kanji)
+            implementation(projects.data.kanji)
 
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)

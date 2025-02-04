@@ -10,7 +10,7 @@ class DesktopApplicationConventionPlugin : Plugin<Project> {
         with(target) {
             afterEvaluate {
                 extensions.configure<ComposeExtension> {
-                    this.extensions.configure<DesktopExtension> {
+                    extensions.configure<DesktopExtension> {
                         application {
                             mainClass = "com.f776.MainKt"
 

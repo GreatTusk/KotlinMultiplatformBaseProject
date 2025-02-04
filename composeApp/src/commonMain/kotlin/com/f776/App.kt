@@ -15,7 +15,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.f776.ui.theme.AppTheme
+import com.f776.core.ui.theme.AppTheme
+
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable

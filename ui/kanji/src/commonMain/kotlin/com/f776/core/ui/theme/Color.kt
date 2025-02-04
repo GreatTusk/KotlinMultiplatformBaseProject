@@ -1,4 +1,5 @@
-package com.f776.ui.theme
+package com.f776.core.ui.theme
+
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF545A92)

@@ -1,25 +1,25 @@
-package com.f776.ui.theme
+package com.f776.core.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
-import kotlinproject.composeapp.generated.resources.Inter_24pt_Bold
-import kotlinproject.composeapp.generated.resources.Inter_24pt_BoldItalic
-import kotlinproject.composeapp.generated.resources.Inter_24pt_Italic
-import kotlinproject.composeapp.generated.resources.Inter_24pt_Regular
-import kotlinproject.composeapp.generated.resources.Inter_24pt_SemiBold
-import kotlinproject.composeapp.generated.resources.Inter_24pt_SemiBoldItalic
-import kotlinproject.composeapp.generated.resources.MPLUS1_Bold
-import kotlinproject.composeapp.generated.resources.MPLUS1_Regular
-import kotlinproject.composeapp.generated.resources.MPLUS1_SemiBold
-import kotlinproject.composeapp.generated.resources.Res
+import kotlinproject.ui.kanji.generated.resources.Inter_24pt_Bold
+import kotlinproject.ui.kanji.generated.resources.Inter_24pt_BoldItalic
+import kotlinproject.ui.kanji.generated.resources.Inter_24pt_Italic
+import kotlinproject.ui.kanji.generated.resources.Inter_24pt_Regular
+import kotlinproject.ui.kanji.generated.resources.Inter_24pt_SemiBold
+import kotlinproject.ui.kanji.generated.resources.Inter_24pt_SemiBoldItalic
+import kotlinproject.ui.kanji.generated.resources.MPLUS1_Bold
+import kotlinproject.ui.kanji.generated.resources.MPLUS1_Regular
+import kotlinproject.ui.kanji.generated.resources.MPLUS1_SemiBold
+import kotlinproject.ui.kanji.generated.resources.Res
 import org.jetbrains.compose.resources.Font
 
 
 @Composable
-fun InterFontFamily() = FontFamily(
+internal fun InterFontFamily() = FontFamily(
     Font(Res.font.Inter_24pt_Regular, weight = FontWeight.Normal),
     Font(Res.font.Inter_24pt_Italic, weight = FontWeight.Normal, style = FontStyle.Italic),
     Font(Res.font.Inter_24pt_SemiBold, weight = FontWeight.SemiBold),
@@ -33,14 +33,14 @@ fun InterFontFamily() = FontFamily(
 )
 
 @Composable
-fun MPLUS1FontFamily() = FontFamily(
+internal fun MPLUS1FontFamily() = FontFamily(
     Font(Res.font.MPLUS1_Regular, weight = FontWeight.Normal),
     Font(Res.font.MPLUS1_SemiBold, weight = FontWeight.SemiBold),
     Font(Res.font.MPLUS1_Bold, weight = FontWeight.Bold)
 )
 
 @Composable
-fun AppTypography() = Typography().run {
+internal fun AppTypography() = Typography().run {
     val displayFontFamily = MPLUS1FontFamily()
     val bodyFontFamily = InterFontFamily()
 

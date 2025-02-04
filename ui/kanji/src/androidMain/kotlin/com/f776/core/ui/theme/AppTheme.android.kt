@@ -1,4 +1,4 @@
-package com.f776.ui.theme
+package com.f776.core.ui.theme
 
 import android.os.Build
 import androidx.compose.material3.MaterialTheme

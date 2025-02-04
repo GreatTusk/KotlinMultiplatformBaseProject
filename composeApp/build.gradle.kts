@@ -10,7 +10,7 @@ kotlin {
         val desktopMain by getting
         
         androidMain.dependencies {
-
+            implementation(libs.koin.android)
         }
         commonMain.dependencies {
             implementation(projects.ui.kanji)

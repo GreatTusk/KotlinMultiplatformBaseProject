@@ -22,6 +22,7 @@ dependencies {
     compileOnly(libs.android.gradlePlugin) //if targetting Android
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.compose.gradlePlugin)
+    compileOnly(libs.room.gradlePlugin)
 }
 
 tasks {

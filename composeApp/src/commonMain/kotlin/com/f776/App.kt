@@ -26,18 +26,19 @@ import com.f776.data.di.DataModule
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.KoinApplication
 import org.koin.compose.koinInject
+import org.koin.core.module.Module
 
 
 @Composable
 @Preview
-fun App(darkTheme: Boolean, dynamicColor: Boolean) {
+fun App(darkTheme: Boolean, dynamicColor: Boolean, platformModule: Module = Module()) {
     AppTheme(
         darkTheme = darkTheme,
         dynamicColor = dynamicColor
     ) {
         KoinApplication(
             application = {
-                modules(DataModule)
+                modules(DataModule, platformModule)
             }
         ) {
             val datasource: UserDatasource = koinInject()

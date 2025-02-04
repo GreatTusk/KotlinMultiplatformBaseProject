@@ -11,7 +11,6 @@ kotlin {
     }
 
     sourceSets {
-
         androidMain.dependencies {
             implementation(libs.koin.android)
         }
@@ -20,13 +19,13 @@ kotlin {
             implementation(libs.sqlite.bundled)
             api(libs.koin.core)
         }
-
-        dependencies {
-            ksp(libs.androidx.room.compiler)
-        }
     }
 }
 
 dependencies {
-    kspCommonMainMetadata(projects.core.database)
+    kspAndroid(libs.androidx.room.compiler)
+    kspIosX64(libs.androidx.room.compiler)
+    kspIosArm64(libs.androidx.room.compiler)
+    kspIosSimulatorArm64(libs.androidx.room.compiler)
+    kspDesktop(libs.androidx.room.compiler)
 }

@@ -26,7 +26,7 @@ class RoomDatabaseConventionPlugin : Plugin<Project> {
                 "kspIosSimulatorArm64",
                 "kspDesktop"
             ).forEach {
-                add(it, libs.findLibrary("androidx-room-compiler"))
+                add(it, libs.findLibrary("androidx-room-compiler").get())
             }
         }
 

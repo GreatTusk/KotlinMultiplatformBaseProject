@@ -58,5 +58,10 @@ gradlePlugin {
             id = libs.plugins.f776.desktopApplication.get().pluginId
             implementationClass = "DesktopApplicationConventionPlugin"
         }
+
+        register("roomMultiplatform"){
+            id = libs.plugins.f776.roomMultiplatform.get().pluginId
+            implementationClass = "RoomDatabaseConventionPlugin"
+        }
     }
 }

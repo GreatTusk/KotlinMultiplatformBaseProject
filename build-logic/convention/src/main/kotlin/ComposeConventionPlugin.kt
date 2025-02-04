@@ -3,6 +3,7 @@ import com.f776.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 import org.jetbrains.compose.ComposeExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
@@ -18,6 +19,10 @@ class ComposeConventionPlugin : Plugin<Project> {
 
         extensions.configure<KotlinMultiplatformExtension> {
             configureCompose(this, composeDeps)
+        }
+
+        dependencies {
+            add("debugImplementation", composeDeps.uiTooling)
         }
     }
 }

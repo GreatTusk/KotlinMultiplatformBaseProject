@@ -74,3 +74,4 @@ f776-kotlinMultiplatform = { id = "com.f776.kotlinMultiplatform" }
 f776-androidLibrary = { id = "com.f776.androidLibrary" }
 f776-androidApplication = { id = "com.f776.androidApplication" }
 f776-desktopApplication = { id = "com.f776.desktopApplication" }
+f776-roomMultiplatform = { id = "com.f776.roomMultiplatform" }

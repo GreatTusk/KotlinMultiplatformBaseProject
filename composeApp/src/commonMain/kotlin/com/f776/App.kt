@@ -5,7 +5,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffold
+import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffoldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -25,6 +27,9 @@ fun App(darkTheme: Boolean, dynamicColor: Boolean) {
     ) {
         var selectedItem by remember { mutableIntStateOf(0) }
         val navItems = listOf("Songs", "Artists", "Playlists")
+        val navSuiteType = NavigationSuiteScaffoldDefaults.calculateFromAdaptiveInfo(
+            currentWindowAdaptiveInfo()
+        )
         NavigationSuiteScaffold(
             navigationSuiteItems = {
                 navItems.forEachIndexed { index, navItem ->
@@ -44,7 +49,7 @@ fun App(darkTheme: Boolean, dynamicColor: Boolean) {
             // Screen content.
             Text(
                 modifier = Modifier.padding(16.dp),
-                text = "Current NavigationSuiteType"
+                text = "Current NavigationSuiteType $navSuiteType"
             )
         }
     }
